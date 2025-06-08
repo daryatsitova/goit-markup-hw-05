@@ -509,6 +509,15 @@ button {
     background-color: rgba(46, 47, 66, 0.4);
     position: fixed;
     top: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .modal {
@@ -624,6 +633,11 @@ border: 1px solid #4d5ae5;
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+    border: none;
+}
+
+.modal-field {
+    margin-bottom: 24px;
 }
 
 .modal-textarea {
@@ -645,4 +659,32 @@ border: 1px solid #4d5ae5;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
 
+}
+
+.check-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: flex;
+    align-items: center;
+}
+
+.check-element {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+}
+
+.modal-check:checked + .check-text .check-element{
+background-color: #404BBF;
+border: 1px solid #404bbf;;
+fill: #f4f4fd;
 }
